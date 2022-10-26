@@ -1,0 +1,80 @@
+// Código de Nav acá
+@import "variables.less"; 
+
+nav{
+    width: 100%;        //líneas en que puede haber cambios para mobile mood 
+    background-color: @nav-bg;// black;//@nav-bg;
+    padding: 0 0 1%;        //líneas en que puede haber cambios para mobile mood 
+    border-bottom: 1px solid @border-real;
+
+    //FRAGMENTO PARA PROBAR CÓMO RESPONDE ESTA QUERY
+    // @media screen and (max-width: 500px){
+    //     background-color: @waterloo;
+    // }
+
+    div{
+        width: 420px;       //líneas en que puede haber cambios para mobile mood 
+        margin: auto;       //líneas en que puede haber cambios para mobile mood 
+        background-color: @nav-bg;// black;//@nav-bg;
+        // padding: 0 33% 1%;
+        h1{
+            // margin-left: 33%;       //líneas en que puede haber cambios para mobile mood 
+            // margin: auto;
+            text-align: center;         //la solución 
+            // border: 1px solid black;
+            font-size: 3.2rem;
+            padding-top: @nav_margin;
+            padding-bottom: @nav_margin;
+        }
+        ul{
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            li{
+                font-size: 1.6rem;
+                font-weight: 600;
+                color: @ebony-clay;
+                // @btn-bg-color;
+                
+            }
+            li:hover{
+                color:@btn-bg-color;
+            }
+        }
+        
+        @media screen and (max-width: 500px){
+            // background-color: @waterloo; //Comentar esto luego luego ahre
+            ul{
+                display: block;
+                // border: 1px solid black;
+                text-align: center;
+                padding: 5px 20px;
+                li{
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                    color: @ebony-clay;
+                    margin: 5px;
+                    // @btn-bg-color;
+                    
+                }
+                li:hover{
+                    color:@btn-bg-color;
+                }
+            }
+
+        }
+
+        
+        // @media screen and (max-width: 350px){
+        //     h1 {
+        //         // margin-left: 100% - #title.width / 2;
+        //     }
+        // }
+
+    }
+    @media screen and (max-width: 500px){
+        div{
+            width: 100%;   
+        }
+    }
+}
